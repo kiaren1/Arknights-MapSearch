@@ -62,7 +62,7 @@ const onSubmit=()=>{
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .login-container{
 display:flex;
 justify-content: center;
