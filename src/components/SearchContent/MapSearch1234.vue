@@ -11,17 +11,16 @@
 
       <button class="search-button" @click="search">查找</button>
     </div>
-    
-      <ShowMap v-if="showMap" :mapList="mapList" class="mapList"></ShowMap>
-    
+
+    <ShowMap v-if="showMap" :mapList="mapList" class="mapList"></ShowMap>
+
     <div class="empty" v-if="!showMap">
       <div class="search-result">{{ hint }}</div>
     </div>
-  
   </div>
 </template>
 
-<style>
+<style lang="less" scoped>
 .map-search {
   display: flex;
   flex-direction: column;
@@ -33,6 +32,7 @@
     height: auto;
   }
   .search-area input {
+    box-sizing: border-box;
     flex-grow: 1;
     margin-right: 3px;
     border-radius: 20px;
@@ -43,7 +43,7 @@
   }
   .search-button {
     line-height: 30px;
-    flex-grow: 1;
+
     /* padding: 10px; */
     width: 150px;
     height: 30px;
@@ -61,14 +61,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 60vh;
 }
 
 .search-result {
-  margin-top: 100px;
-  display: flex;
   text-align: center;
-  flex-direction: column;
-  width: 130px;
+  width: 200px;
+  font-size: large;
+  color: red;
+  /* 在支持的浏览器中，设置文本最大显示两行，超过的部分将被截断并以省略号（...）表示 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 </style>
 
