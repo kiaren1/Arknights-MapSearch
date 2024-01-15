@@ -114,7 +114,7 @@ input {
   background-color: violet;
 }
 .login-btn {
-  background-color: rgb(40, 167, 200);
+  background-color: rgb(40, 167, 400);
 }
 .register-btn {
   background-color: #007bff;
