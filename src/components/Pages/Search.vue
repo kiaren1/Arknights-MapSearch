@@ -26,7 +26,7 @@
     </div>
     </template>
     
-    <style>
+    <style lang="less" scoped>
     .content{
         display: flex;
         width: 100%;
